@@ -5,11 +5,11 @@ import jakarta.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAO_Libro <T, ID> {
+public class DAO<T, ID> {
     private EntityManager em;
     private Class<T> entityClass;
 
-    public DAO_Libro() {
+    public DAO() {
         em = Conexion.getEntityManager();
         this.entityClass = entityClass;
     }

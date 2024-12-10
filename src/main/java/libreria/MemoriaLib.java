@@ -5,12 +5,12 @@ import java.util.List;
 
 public class MemoriaLib {
     private List<Libro> memoriaLibros;
-    private DAO_Libro daoLibro;
+    private DAO daoLibro;
     private Validaciones validaciones;
 
     public void Inicializar() {
         this.memoriaLibros = new ArrayList();
-        this.daoLibro = new DAO_Libro();
+        this.daoLibro = new DAO();
         this.validaciones = new Validaciones();
     }
 
