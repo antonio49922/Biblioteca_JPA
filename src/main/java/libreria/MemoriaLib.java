@@ -49,7 +49,9 @@ public class MemoriaLib {
         return null;
     }
 
-
+    public List<Libro> getMemoriaLibros() {
+        return memoriaLibros;
+    }
 
 
 
