@@ -10,8 +10,8 @@ public class DAO<T, ID> {
     private Class<T> entityClass;
 
     public DAO() {
-        em = Conexion.getEntityManager();
         this.entityClass = entityClass;
+        em = Conexion.getEntityManager();
     }
 
     public void insert(T entity) {
