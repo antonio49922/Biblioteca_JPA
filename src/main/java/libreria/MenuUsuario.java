@@ -172,8 +172,5 @@ package libreria;
             }
         }
 
-        public static void main(String[] args) {
-            MenuUsuario menu = new MenuUsuario();
-            menu.mostrarMenu();
-        }
+
     }

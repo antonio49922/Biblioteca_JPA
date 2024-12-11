@@ -88,7 +88,7 @@ public class Validaciones {
 
     public void hacerPrestamo(Usuario usuario, Ejemplar ejemplar) throws Exception {
         prestamosUsuario(usuario);
-
+        disponibilidadPrestamo(ejemplar);
         Prestamo prestamo = new Prestamo();
         prestamo.setUsuario(usuario);
         prestamo.setEjemplar(ejemplar);
@@ -125,3 +125,6 @@ public class Validaciones {
 
 
 }
+
+
+//ahora quiero que hagas una clase main con la que llamar a los menus que has creado, que aparezca un menu en el que elejiremos que menu queremos ver (el de libro, usuario, prestamo y el de ejemplar)

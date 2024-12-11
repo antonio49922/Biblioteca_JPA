@@ -15,10 +15,21 @@ public class MemoriaUsuario {
     }
 
     public int agregarUsuario(Usuario usuario) {
-        if(!memoria.contains(usuario) && validaciones.validarUsuario(usuario)) {
+        int existente = buscarUsuario(usuario.getDni());
+
+        if(!memoria.contains(usuario) && validaciones.validarUsuario(usuario) && existente == -1) {
             memoria.add(usuario);
             dao.insert(usuario);
             return 1;
+        }
+        return -1;
+    }
+
+    public int buscarUsuario(String dni) {
+        for (Usuario usuario : memoria) {
+            if (usuario.getDni().equals(dni)) {
+                return 1;
+            }
         }
         return -1;
     }
