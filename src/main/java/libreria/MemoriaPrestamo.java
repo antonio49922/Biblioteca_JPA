@@ -15,7 +15,7 @@ public class MemoriaPrestamo {
     }
 
     public int agregarPrestamo(Prestamo prestamo) {
-        if(!memoria.contains(prestamo) && validaciones.validarUsuario(usuario)) {
+        if(!memoria.contains(prestamo) && validaciones.validarPrestamo(prestamo)) {
             memoria.add(prestamo);
             dao.insert(prestamo);
             return 1;
